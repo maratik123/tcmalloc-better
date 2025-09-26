@@ -43,6 +43,11 @@ fn main() {
 
 A __C++__ compiler is required for building [TCMalloc] with cargo.
 
+## Preparing native sources
+
+This workspace vendors Google TCMalloc and Abseil inside `libtcmalloc-sys/c_src`.
+Run `git submodule update --init --recursive` after cloning to populate those directories before building.
+
 ## See also
 * [malloc-best-effort] - library, which automatically selects
                          the best suited allocator based on the target platform
